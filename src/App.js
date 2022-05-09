@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react';
+import Content from './components/Content';
+//import Modal from './components/Modal';
+import Navbar from './components/Navbar'; 
+import Placeholder from './components/Placeholder';
+ 
 
 function App() {
+
+  const [showModal, setShowModal] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+    <  >
+      <Navbar close={setShowModal} />
+      <Content />
+
+   {
+     showModal &&(
+      <Placeholder close={setShowModal} />
+     )
+   }
+
+      
+        
+    
+
+     
+
+    </>
   );
 }
 

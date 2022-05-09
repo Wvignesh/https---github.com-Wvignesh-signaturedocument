@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
+ body{
+     height: 100%;
+     width: 100%;
+     box-sizing: border-box;
+     
+ }
+ 
+  
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .heading{
+    font-family: serif;
+    
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ 
+ .fa-caret-down{
+
+    color:rgb(216, 166, 73)
+ }
+
+ .fa-house{
+     color: black;
+ }
+
+ .text{
+     color: black;
+     
+ }
+
+
+ .fa-xmark{
+
+color: #000;
+
+ }
+
+ .fa-circle{
+     color: lightgrey;
+ }
+  
+  .image{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+     
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .but{
+      
+    background-color:rgb(216, 166, 73)
   }
-  to {
-    transform: rotate(360deg);
+
+  .buts{
+       color: black;
+      text-decoration: none;
   }
-}
+
+  .x-mark{
+      justify-content: flex-end;
+  }
+
+  .place-card{
+      height: 19rem;
+      width: 20rem;
+      border: 3px solid #d3d3d3;
+     
+  }
+
+  .cb{
+
+    justify-content: space-between;
+  }
+
+  .signatureContainer{
+    position: fixed;
+    top: 200px;
+    left: 300px;
+  }
