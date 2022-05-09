@@ -48,21 +48,46 @@ color: #000;
 
   .but{
       
-    background-color:rgb(216, 166, 73)
-  }
-
-  .buts{
-       color: black;
-      text-decoration: none;
+    background-color:rgb(216, 166, 73);
+    padding:2px 15px; 
+    margin-bottom: 5px;
+    
   }
 
   .x-mark{
-      justify-content: flex-end;
+      justify-content: space-between;
+      
   }
 
+ #label{
+   font-size: 12px;
+   padding-bottom: 1px;
+   margin-top: 1px;
+ }
+
+
+  .signatureCanvas{
+
+    cursor: url('https://i.imgur.com/6wmyrkK.gif'),auto;
+    border: 1px solid rgb(216, 166, 73);
+    margin: 0 15px;
+    border-radius: 10px;
+    height: 150px;
+  }
+
+  .radio{
+    
+    padding: 0 2px;
+  }
+
+ .sig{
+   font-size: 12px;
+ }
+
+
   .place-card{
-      height: 19rem;
-      width: 20rem;
+      height: 21rem;
+      width: 24rem;
       border: 3px solid #d3d3d3;
      
   }
@@ -77,3 +102,12 @@ color: #000;
     top: 200px;
     left: 300px;
   }
+
+  
+  .box {
+        position: absolute;
+        cursor: move;
+         
+      }
+      
+ 

@@ -1,4 +1,5 @@
 import SignatureCanvas from "react-signature-canvas";
+import Draggable from 'react-draggable';
 
 function Placeholder( {close}) {
  
@@ -8,24 +9,40 @@ function Placeholder( {close}) {
 
 <div className="App">
        
-      <div className="signatureContainer card place-card shadow  "   >
-    <span className='d-flex x-mark mx-2  fs-3 p-1'>  <i class="fa-solid fa-xmark "  value="Delete" id="delete" type="button" onClick={()=> close(false)} ></i></span>
+      <Draggable>
+
+      <div className="signatureContainer card place-card shadow box "   >
+    <span className='d-flex x-mark mx-2  fs-3 p-1'> <span className="fs-6">Sign on Document</span> <i class="fa-solid fa-xmark "  value="Delete" id="delete" type="button" onClick={()=> close(false)} ></i></span>
+
+    <p className="sig py-1 mx-2">Please in this space provided below to confirm your signature</p>
         <SignatureCanvas
           penColor="#000"
           canvasProps={{
-            width: 300,
-            height: 200,
+
             className: "signatureCanvas"
           }}
           
         /> 
-         <div className='card-body cb bg-light d-flex   '>
+        <br/>
+     
+     <div className="radio-sig d-flex">
+       
+     <input type="radio" className="radio mx-2 " />
+<label for="signature" id="label" >Apply this signature for require places on document</label>
+     </div>
+         
+
+         <div className='card-body cb   d-flex   '>
            
-    <span   class=" buts pt-0">Sign in this space</span>
-    <a href="/#" class="card-link btn but">Assign Party</a>
+    <span   class="btn but"> Confirm Signature  </span>
+   
          </div>
+
       </div>
       
+      </Draggable>
+
+
     </div>
 
     
