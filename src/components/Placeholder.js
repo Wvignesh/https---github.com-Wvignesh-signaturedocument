@@ -1,8 +1,26 @@
 import SignatureCanvas from "react-signature-canvas";
+import React,{useRef} from "react";
 import Draggable from 'react-draggable';
 
 function Placeholder( {close}) {
+
+  const ref = useRef({});
+
+  let data = "";
  
+ function clear(){
+
+  ref.current.clear();
+
+ }
+
+
+function save(){
+
+  data=ref.current.toDataURL()
+  alert("confirm your signature")
+}
+
 
   return (
     < >
@@ -21,6 +39,8 @@ function Placeholder( {close}) {
 
             className: "signatureCanvas"
           }}
+
+          ref={ref}
           
         /> 
         <br/>
@@ -34,7 +54,8 @@ function Placeholder( {close}) {
 
          <div className='card-body cb   d-flex   '>
            
-    <span   class="btn but"> Confirm Signature  </span>
+    <span   class="btn but" onClick={save}> Confirm Signature  </span>
+    <button className="btn btn-primary" onClick={clear}>Clear</button>
    
          </div>
 
